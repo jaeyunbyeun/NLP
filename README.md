@@ -33,14 +33,3 @@ TF-IDF 특징 추출과 **Logistic Regression**을 기반으로 한 다중 라�
   - identity_hate  
 
 ---
-
-## 📁 프로젝트 구조
-
-project/
-├── src/
-│ ├── baseline.py
-│ └── 기타 코드
-├── data/
-│ └── train.csv
-├── README.md
-└── requirements.txt
