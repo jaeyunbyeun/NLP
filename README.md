@@ -1,17 +1,46 @@
-# NLP Project
+# NLP Toxic Comment Classification  
+Logistic Regression + TF-IDF 기반 다중 라벨 독성 댓글 분류 모델
 
-kaggle: https://www.kaggle.com/competitions/mncchallenge-nlp/overview
-
-A simple NLP project using **Ollama** and **LangChain** to run local LLMs (e.g., Llama3) and test basic text generation.
-
----
-
-## 🚀 Features
-- Local LLM inference using Ollama  
-- Simple test script (`test01.py`)  
-- LangChain integration  
-- Easy to extend for NLP tasks (classification, chat, summarization, etc.)  
+이 프로젝트는 Kaggle **Toxic Comment Classification Challenge** 데이터셋을 활용하여  
+TF-IDF 특징 추출과 **Logistic Regression**을 기반으로 한 다중 라벨 분류 모델을 구현한 코드입니다.
 
 ---
 
-## 📁 Project Structure
+## 📌 주요 기능
+
+- **텍스트 전처리(clean_text)**  
+  - URL 제거  
+  - 숫자 치환(number)  
+  - 특수문자 제거  
+  - 공백 정리  
+
+- **TF-IDF 벡터화**  
+  - 최대 120,000개의 feature  
+  - bigram(1–2-gram) 적용  
+  - sublinear TF 활성화  
+
+- **Logistic Regression 모델 학습**  
+  - 각 라벨별 개별 모델 학습  
+  - `solver="saga"`로 sparse matrix 최적화  
+  - ROC-AUC 기반 성능 평가  
+
+- **다중 라벨 toxic classification** 수행  
+  - toxic  
+  - severe_toxic  
+  - obscene  
+  - threat  
+  - insult  
+  - identity_hate  
+
+---
+
+## 📁 프로젝트 구조
+
+project/
+├── src/
+│ ├── baseline.py
+│ └── 기타 코드
+├── data/
+│ └── train.csv
+├── README.md
+└── requirements.txt
