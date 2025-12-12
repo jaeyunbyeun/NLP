@@ -2,7 +2,7 @@
 Logistic Regression + TF-IDF 기반 다중 라벨 독성 댓글 분류 모델
 
 이 프로젝트는 Kaggle **Toxic Comment Classification Challenge** 데이터셋을 활용하여  
-TF-IDF 특징 추출과 **Logistic Regression**을 기반으로 한 다중 라벨 분류 모델을 구현한 코드입니다.
+TF-IDF 특징 추출과 **Logistic Regression**을 기반으로 한 다중 라벨 분류 모델을 구현한 코드이다.
 
 ---
 
