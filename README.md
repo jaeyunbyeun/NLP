@@ -28,5 +28,11 @@
 
 ## 📁 프로젝트 디렉토리 구조 (Project Directory Structure)
 '''
-project/ ├─ data/ │ ├─ train.csv # Kaggle 원본 학습 데이터 ├─ src/ │ ├─ baseline.py # TF-IDF + Logistic Regression 모델 구현 및 학습 코드 │ ├─ bert_train.py # (향후 연구용) BERT 기반 모델 학습 코드 ├─ README.md # 현재 문서 └─ requirements.txt # 프로젝트 종속성 목록    
+project/
+ ├─ data/
+ │   ├─ train.csv
+ ├─ src/
+ │   ├─ baseline.py
+ │   ├─ bert_train.py
+ └─ README.md 
 '''
