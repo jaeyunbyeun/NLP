@@ -26,11 +26,13 @@
 * **데이터 처리:** `pandas`, `numpy`
 * **환경:** Jupyter Notebook / Google Colab
 
-## ⚙️ 설치 및 실행 방법 (Installation & Usage)
+## 📁 프로젝트 디렉토리 구조 (Project Directory Structure)
 
-### 1. 환경 설정
-
-프로젝트를 실행하기 위해 필요한 라이브러리를 설치합니다.
-
-```bash
-pip install pandas numpy scikit-learn
+project/
+ ├─ data/
+ │    ├─ train.csv             
+ ├─ src/
+ │    ├─ baseline.py           
+ │    ├─ bert_train.py        
+ ├─ README.md                
+ └─ requirements.txt         
