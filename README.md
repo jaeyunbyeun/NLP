@@ -30,9 +30,11 @@
 ```
 project/
  ├─ data/
+ │   ├─ sample_submission.csv
+ │   ├─ test.csv
+ │   ├─ test_labels.csv
  │   ├─ train.csv
  ├─ src/
  │   ├─ baseline.py
- │   ├─ bert_train.py
  └─ README.md 
 ```
