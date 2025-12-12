@@ -27,7 +27,7 @@
 * **환경:** Jupyter Notebook / Google Colab
 
 ## 📁 프로젝트 디렉토리 구조 (Project Directory Structure)
-'''
+```
 project/
  ├─ data/
  │   ├─ train.csv
@@ -35,4 +35,4 @@ project/
  │   ├─ baseline.py
  │   ├─ bert_train.py
  └─ README.md 
-'''
+```
