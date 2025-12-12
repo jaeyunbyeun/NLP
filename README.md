@@ -1,35 +1,36 @@
-# NLP Toxic Comment Classification  
-Logistic Regression + TF-IDF 기반 다중 라벨 독성 댓글 분류 모델
+# 💬 악성 댓글 분류를 위한 TF-IDF 기반 Logistic Regression 분석
 
-이 프로젝트는 Kaggle **Toxic Comment Classification Challenge** 데이터셋을 활용하여  
-TF-IDF 특징 추출과 **Logistic Regression**을 기반으로 한 다중 라벨 분류 모델을 구현한 코드이다.
+## 🚀 프로젝트 개요 (Overview)
 
----
+본 프로젝트는 Kaggle Toxic Comment Classification Challenge 데이터셋을 활용하여 악성 댓글(Toxic Comments)을 자동으로 분류하고 탐지하는 경량 모델을 구축하고 그 성능을 분석합니다.
 
-## 📌 주요 기능
+복잡하고 자원 소모가 큰 최신 Transformer 기반 모델 대신, **TF-IDF(Term Frequency–Inverse Document Frequency)** 벡터화와 **Logistic Regression**을 결합한 전통적인 머신러닝 접근 방식을 채택하여 **높은 효율성**과 **뛰어난 해석 가능성**을 입증하는 것을 목표로 합니다.
 
-- **텍스트 전처리(clean_text)**  
-  - URL 제거  
-  - 숫자 치환(number)  
-  - 특수문자 제거  
-  - 공백 정리  
+## 🌟 주요 특징 및 결과 (Features & Results)
 
-- **TF-IDF 벡터화**  
-  - 최대 120,000개의 feature  
-  - bigram(1–2-gram) 적용  
-  - sublinear TF 활성화  
+* **모델 아키텍처:** 6개의 독립적인 라벨(toxic, severe toxic, obscene, threat, insult, identity hate)에 대한 Multi-label Logistic Regression 모델 (Binary Relevance).
+* **성능 지표:** ROC-AUC (Receiver Operating Characteristic - Area Under the Curve)
+* **주요 결과:** 모든 라벨에 대한 평균 **ROC-AUC 0.9795** 달성.
+* **최적화:** 소수 클래스 불균형 완화를 위한 `class_weight` 자동 보정 옵션 적용.
 
-- **Logistic Regression 모델 학습**  
-  - 각 라벨별 개별 모델 학습  
-  - `solver="saga"`로 sparse matrix 최적화  
-  - ROC-AUC 기반 성능 평가  
+| Label | AUC Score |
+| :--- | :--- |
+| **Average** | **0.9795** |
+| severe toxic | 0.9868 |
+| toxic | 0.9717 |
 
-- **다중 라벨 toxic classification** 수행  
-  - toxic  
-  - severe_toxic  
-  - obscene  
-  - threat  
-  - insult  
-  - identity_hate  
+## 🛠️ 기술 스택 (Tech Stack)
 
----
+* **언어:** Python
+* **핵심 라이브러리:** `scikit-learn` (LogisticRegression, TfidfVectorizer)
+* **데이터 처리:** `pandas`, `numpy`
+* **환경:** Jupyter Notebook / Google Colab
+
+## ⚙️ 설치 및 실행 방법 (Installation & Usage)
+
+### 1. 환경 설정
+
+프로젝트를 실행하기 위해 필요한 라이브러리를 설치합니다.
+
+```bash
+pip install pandas numpy scikit-learn
